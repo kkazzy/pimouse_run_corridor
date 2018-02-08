@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import unittest, rostest
-import resnode, rospy
+import rosnode, rospy
 import time
 
 class WallStopTest(unittest.TestCase):
