@@ -10,14 +10,11 @@ class WallStopTest(unittest.TestCase):
 
         time.sleep(0.3)
 
-        left = 0
-        right = 0
-
         with open("/dev/rtmotor_raw_l0", "r") as lf,\
              open("/dev/rtmotor_raw_r0", "r") as rf:
             left = int(lf.readline().rstrip())
             right = int(rf.readline().rstrip())
-        return left, right
+        return left,right
 
     def test_io(self):
         left, right = self.set_and_get(400,100,100,0)
